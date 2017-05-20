@@ -23,7 +23,7 @@ There are a few steps that needs to be done to ensure that you can successfully 
 4. Create the basic framework for your application by typing in the following commands into your Windows Command Window or Apple Terminal Window:
 
 ```
-git clone http://git.dopensource.com/tmoore/wsu-hackathon
+git clone https://github.com/flyballlabs/wsuhack2017/
 cd wsu-hackathon/challenge/
 mkdir suspicious-activity
 npm install firebase -save
