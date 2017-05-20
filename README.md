@@ -29,7 +29,7 @@ Bonus (gives you a higher probablity to win):
 
 Tips:
 
-- The data fields have already been defined by the API.  Use the API dashboard at http://wsuhack.flyballlabs.com to look at the data field definitions (aka the schema)
+- The data fields have already been defined by the API.  Use the API dashboard at https://wsuhack.flyballlabs.com to look at the data field definitions (aka the schema)
 
 
 ## [The Challenge Details](./challenge)
