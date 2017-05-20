@@ -1,0 +1,166 @@
+./start-am-server.sh: line 32: ./api/am/venv/bin/activate: No such file or directory
+ * Running on http://0.0.0.0:8989/ (Press CTRL+C to quit)
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 147-394-477
+10.10.10.89 - - [18/May/2017 14:44:33] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 14:44:33] "GET /swagger.json HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:03:53] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:03:53] "GET /swagger.json HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:04:04] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:04:17] "GET /activity HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:06:06] "GET /activity/activity HTTP/1.1" 404 -
+10.10.10.89 - - [18/May/2017 15:06:27] "GET /activity HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:07] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:07] "GET /swaggerui/bower/swagger-ui/dist/css/typography.css HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:07] "GET /swaggerui/bower/swagger-ui/dist/css/reset.css HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:07] "GET /swaggerui/bower/swagger-ui/dist/css/screen.css HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:07] "GET /swaggerui/bower/swagger-ui/dist/lib/jquery-1.8.0.min.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:07] "GET /swaggerui/bower/swagger-ui/dist/lib/jquery.slideto.min.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:07] "GET /swaggerui/bower/swagger-ui/dist/lib/jquery.wiggle.min.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:07] "GET /swaggerui/bower/swagger-ui/dist/lib/jquery.ba-bbq.min.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:07] "GET /swaggerui/bower/swagger-ui/dist/lib/handlebars-2.0.0.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:08] "GET /swaggerui/bower/swagger-ui/dist/lib/underscore-min.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:08] "GET /swaggerui/bower/swagger-ui/dist/lib/backbone-min.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:08] "GET /swaggerui/bower/swagger-ui/dist/lib/highlight.7.3.pack.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:08] "GET /swaggerui/bower/swagger-ui/dist/swagger-ui.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:08] "GET /swaggerui/bower/swagger-ui/dist/lib/jsoneditor.min.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:10] "GET /swaggerui/bower/swagger-ui/dist/lib/marked.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:10] "GET /swaggerui/bower/swagger-ui/dist/lib/swagger-oauth.js HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:10] "GET /swaggerui/bower/swagger-ui/dist/fonts/DroidSans.ttf HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:10] "GET /swagger.json HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:10] "GET /swaggerui/bower/swagger-ui/dist/fonts/DroidSans-Bold.ttf HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:10] "GET /swaggerui/bower/swagger-ui/dist/images/throbber.gif HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:07:15] "GET /users HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:10:07] "POST /users HTTP/1.1" 201 -
+10.10.10.89 - - [18/May/2017 15:24:28] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:24:29] "GET /swagger.json HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:43:54] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 15:43:55] "GET /swagger.json HTTP/1.1" 200 -
+--------------------------------------------------------------------------------
+ERROR in app [/usr/local/lib/python3.5/site-packages/flask/app.py:1560]:
+Exception on /users [POST]
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/site-packages/flask_restplus/api.py", line 309, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "rest_am_server.py", line 84, in post
+    create_user(request.json)
+  File "/home/mack/wsu-hackathon/server-api/am/api/am/business.py", line 6, in create_user
+    username = data.get('username')
+AttributeError: 'NoneType' object has no attribute 'get'
+10.10.10.89 - - [18/May/2017 15:54:04] "POST /users HTTP/1.1" 500 -
+--------------------------------------------------------------------------------
+ERROR in app [/usr/local/lib/python3.5/site-packages/flask/app.py:1560]:
+Exception on /auth [POST]
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/site-packages/flask_restplus/api.py", line 309, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "rest_am_server.py", line 70, in post
+    auth_user(request.json)
+  File "/home/mack/wsu-hackathon/server-api/am/api/am/business.py", line 2, in auth_user
+    username = data.get('username')
+AttributeError: 'NoneType' object has no attribute 'get'
+10.10.10.89 - - [18/May/2017 15:54:33] "POST /auth HTTP/1.1" 500 -
+10.10.10.89 - - [18/May/2017 15:55:13] "POST /auth HTTP/1.1" 201 -
+10.10.10.89 - - [18/May/2017 15:57:30] "POST /auth HTTP/1.1" 201 -
+10.10.10.89 - - [18/May/2017 15:58:48] "POST /auth HTTP/1.1" 201 -
+10.10.10.89 - - [18/May/2017 15:58:48] "POST /auth HTTP/1.1" 201 -
+10.10.10.89 - - [18/May/2017 15:58:48] "POST /auth HTTP/1.1" 201 -
+10.10.10.89 - - [18/May/2017 15:58:51] "POST /auth HTTP/1.1" 201 -
+10.10.10.89 - - [18/May/2017 15:58:53] "POST /auth HTTP/1.1" 201 -
+--------------------------------------------------------------------------------
+ERROR in app [/usr/local/lib/python3.5/site-packages/flask/app.py:1560]:
+Exception on /auth [POST]
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/site-packages/flask_restplus/api.py", line 309, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "rest_am_server.py", line 70, in post
+    auth_user(request.json)
+  File "/home/mack/wsu-hackathon/server-api/am/api/am/business.py", line 2, in auth_user
+    username = data.get('username')
+AttributeError: 'NoneType' object has no attribute 'get'
+10.10.10.89 - - [18/May/2017 15:59:10] "POST /auth HTTP/1.1" 500 -
+--------------------------------------------------------------------------------
+ERROR in app [/usr/local/lib/python3.5/site-packages/flask/app.py:1560]:
+Exception on /auth [POST]
+--------------------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/usr/local/lib/python3.5/site-packages/flask/app.py", line 1612, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/local/lib/python3.5/site-packages/flask/app.py", line 1598, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/usr/local/lib/python3.5/site-packages/flask_restplus/api.py", line 309, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/flask/views.py", line 84, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/usr/local/lib/python3.5/site-packages/flask_restplus/resource.py", line 44, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "rest_am_server.py", line 70, in post
+    auth_user(request.json)
+  File "/home/mack/wsu-hackathon/server-api/am/api/am/business.py", line 2, in auth_user
+    username = data.get('username')
+AttributeError: 'NoneType' object has no attribute 'get'
+10.10.10.89 - - [18/May/2017 15:59:15] "POST /auth HTTP/1.1" 500 -
+10.10.10.89 - - [18/May/2017 16:06:36] "POST /auth HTTP/1.1" 400 -
+10.10.10.89 - - [18/May/2017 16:08:06] "POST /auth HTTP/1.1" 400 -
+10.10.10.89 - - [18/May/2017 16:11:21] "POST /auth HTTP/1.1" 400 -
+10.10.10.89 - - [18/May/2017 16:12:46] "POST /auth HTTP/1.1" 201 -
+10.10.10.89 - - [18/May/2017 16:13:25] "POST /auth HTTP/1.1" 201 -
+10.10.10.89 - - [18/May/2017 16:51:45] "OPTIONS /auth HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 16:51:48] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 16:51:48] "GET /swagger.json HTTP/1.1" 200 -
+ * Detected change in '/home/mack/wsu-hackathon/server-api/am/rest_am_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 147-394-477
+10.10.10.89 - - [18/May/2017 16:58:40] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 16:58:41] "GET /swagger.json HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 16:58:45] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 16:58:45] "GET /swagger.json HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 16:58:47] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 16:58:48] "GET /swagger.json HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 16:59:31] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 16:59:32] "GET /swagger.json HTTP/1.1" 200 -
+ * Detected change in '/home/mack/wsu-hackathon/server-api/am/rest_am_server.py', reloading
+ * Restarting with stat
+ * Debugger is active!
+ * Debugger pin code: 147-394-477
+10.10.10.89 - - [18/May/2017 17:01:08] "GET / HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 17:01:08] "GET /swagger.json HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 17:04:54] "OPTIONS /auth HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 17:04:54] "POST /auth HTTP/1.1" 201 -
+10.10.10.89 - - [18/May/2017 17:08:46] "OPTIONS /auth HTTP/1.1" 200 -
+10.10.10.89 - - [18/May/2017 17:08:46] "POST /auth HTTP/1.1" 201 -
+ * Detected change in '/home/mack/wsu-hackathon/server-api/am/rest_am_server.py', reloading
+ * Restarting with stat
+  File "rest_am_server.py", line 142
+    app.run(host='0.0.0.0', port=8989, ssl_context=context debug=True)                #  Start a development server
+                                                               ^
+SyntaxError: invalid syntax

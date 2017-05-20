@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+
+    <title>Login Page</title>
+    
+    <!-- Bootstrap Font-awesome -->
+    <link 
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      type="text/css"
+      rel="stylesheet" 
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous" />
+
+    <!-- Add some swag -->
+    <link type="text/css" rel="stylesheet" media="screen" href="global.css" />
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <div class="form background">
+        <div class="header">Suspicious Activity Monitory Homepage</div>
+        <hr>
+        <div class="content">
+<!--
+          <div class="loading" data-bind="visible: !loaded()">
+            <i class="fa fa-spinner fa-spin"></i> Loading...
+          </div>
+-->
+        <div id="form">
+
+<!-- TODO: -->
+    <form id="login-form" method="post" onSubmit="loginUser();return false;"> 
+      Username:<br> 
+      <input type="text" name="username" value=""> 
+      <br> 
+      
+      Password:<br> 
+      <input type="text" name="password" value=""> 
+      <br><br> 
+      
+      <input type="submit" value="submit"> 
+      <br><br> 
+      <button type="button" class="add new" id="register-user" onclick="window.location.href = 'register.html'">Register Now</button> 
+    </form> 
+
+        <br><br>
+        </div>
+
+      </div>
+    </div>
+
+  <!-- Jquery -->
+  <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+  <!-- Logic for performing actions -->
+  <script type="text/javascript" src="functions.js"></script>
+
+  </body>
+
+</html>
