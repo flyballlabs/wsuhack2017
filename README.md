@@ -11,7 +11,7 @@ The goal is to create a web application that will allow a student or staff to re
 - Report Suspicious Activity
 - Review Suspicious Activity
 
-Each page will leverage an Application Programming Interface (API). That's located at http://wsuhack.flyballlabs.com.
+Each page will leverage an Application Programming Interface (API). That's located at https://wsuhack.flyballlabs.com.
 
 The Login Page has been created for you, which will provide you an example of how to invoke (aka use) the API.  
 The API has a set of users and suspicious activity data.
