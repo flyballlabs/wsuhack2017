@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from am.database import db
+from database import db
 
 
 class User(db.Model):
@@ -17,7 +17,7 @@ class User(db.Model):
     #category_id = db.Column(db.Integer, db.ForeignKey('category.id'))
     #category = db.relationship('Category', backref=db.backref('posts', lazy='dynamic'))
 
-    def __init__(self, username,password,name,email,mobile,grade_level,user_type,school_id):
+    def __init__(self, username,password,name="",email="",mobile="",grade_level=0,user_type=0,school_id=0):
         self.username = username
         self.password = password
         self.name = name

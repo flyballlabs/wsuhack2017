@@ -1,3 +1,6 @@
+from database import db
+from database.models import User
+
 def auth_user(data):
     username = data.get('username')
     password = data.get('password')
@@ -11,6 +14,9 @@ def create_user(data):
     grade_level = data.get('grade_level')
     mobile = data.get('mobile')
     school_id = data.get('school_id')
+    user = User(username,password)
+    db.session.add(user)
+    db.session.commit()
 
 def create_school(data):
     name = data.get('name')

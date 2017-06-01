@@ -1,6 +1,6 @@
 #!/bin/bash
 
-REQ_PYTHON_VER=3.5
+REQ_PYTHON_VER=3.6
 
 # Uncomment and set this variable to an explicit Python executable file name
 # If set, the script will not try and find a Python version with 3.5 as the major release number
@@ -29,5 +29,4 @@ done
 if [ -z ${PYTHON_CMD+x} ]; then
 	isPythonInstalled
 fi
-source ./api/am/venv/bin/activate
 $PYTHON_CMD rest_am_server.py

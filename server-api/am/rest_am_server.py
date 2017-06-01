@@ -1,10 +1,8 @@
 from flask import Flask, Blueprint,request
 from flask_restplus import Resource, Api, fields
-from api.am.endpoints.schools import ns as schools_namespace
-from api.am.business import auth_user, create_user, create_school, create_activity
 from flask_cors import CORS, cross_origin
-#from api.am.serializers import user
-#from api.restplus import api
+from api.am.business import auth_user, create_user, create_school, create_activity
+from database import db
 import settings
 
 
@@ -116,8 +114,8 @@ class ActvityCollection(Resource):
 
 def configure_app(flask_app):
     #flask_app.config['SERVER_NAME'] = settings.FLASK_SERVER_NAME
-    #flask_app.config['SQLALCHEMY_DATABASE_URI'] = settings.SQLALCHEMY_DATABASE_URI
-    #flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = settings.SQLALCHEMY_TRACK_MODIFICATIONS
+    flask_app.config['SQLALCHEMY_DATABASE_URI'] = settings.SQLALCHEMY_DATABASE_URI
+    flask_app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = settings.SQLALCHEMY_TRACK_MODIFICATIONS
     flask_app.config['SWAGGER_UI_DOC_EXPANSION'] = settings.RESTPLUS_SWAGGER_UI_DOC_EXPANSION
     #flask_app.config['RESTPLUS_VALIDATE'] = settings.RESTPLUS_VALIDATE
     #flask_app.config['RESTPLUS_MASK_SWAGGER'] = settings.RESTPLUS_MASK_SWAGGER
@@ -126,14 +124,12 @@ def configure_app(flask_app):
 
 def initialize_app(flask_app):
     configure_app(flask_app)
-
-    #blueprint = Blueprint('api', __name__, url_prefix='/api')
-    #api.init_app(blueprint)
-    #api.add_namespace(schools_namespace)
-    #flask_app.register_blueprint(blueprint)
-
-    #db.init_app(flask_app)
-
+    db.init_app(flask_app)
+    
+    #Not working
+    #from database.models import User # noqa
+    #db.drop_all()
+    #db.create_all()
 
 
 def main():
