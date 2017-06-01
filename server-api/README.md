@@ -11,7 +11,7 @@ The best article for installing it on CentOS 7 is [here](https://www.digitalocea
 git clone https://github.com/flyballlabs/wsuhack2017 
 cd wsuhack2017
 pyvenv-3.6 venv
-pip3.6 install -r requirements.txt
+pip3.6 install -r am/requirements.txt
 ```
 
 ## Start the API
